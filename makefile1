@@ -1,0 +1,469 @@
+pottery: 
+	@echo potteryn	@echo pottery > pottery
+
+irrigation: pottery
+	@echo irrigationn	@echo irrigation > irrigation
+
+writing: pottery
+	@echo writingn	@echo writing > writing
+
+animal_husbandry: 
+	@echo animal_husbandryn	@echo animal_husbandry > animal_husbandry
+
+archery: animal_husbandry
+	@echo archeryn	@echo archery > archery
+
+mining: 
+	@echo miningn	@echo mining > mining
+
+masonry: mining
+	@echo masonryn	@echo masonry > masonry
+
+bronze_working: mining
+	@echo bronze_workingn	@echo bronze_working > bronze_working
+
+the_wheel: mining
+	@echo the_wheeln	@echo the_wheel > the_wheel
+
+apprenticeship: mining currency horseback_riding
+	@echo apprenticeshipn	@echo apprenticeship > apprenticeship
+
+sailing: 
+	@echo sailingn	@echo sailing > sailing
+
+celestial_navigation: sailing astrology
+	@echo celestial_navigationn	@echo celestial_navigation > celestial_navigation
+
+shipbuilding: sailing
+	@echo shipbuildingn	@echo shipbuilding > shipbuilding
+
+astrology: 
+	@echo astrologyn	@echo astrology > astrology
+
+drama_poetry: astrology irrigation masonry early_empire mysticism
+	@echo drama_poetryn	@echo drama_poetry > drama_poetry
+
+theology: astrology mysticism drama_poetry
+	@echo theologyn	@echo theology > theology
+
+horseback_riding: archery
+	@echo horseback_ridingn	@echo horseback_riding > horseback_riding
+
+machinery: archery iron_working engineering
+	@echo machineryn	@echo machinery > machinery
+
+currency: writing foreign_trade
+	@echo currencyn	@echo currency > currency
+
+state_workforce: writing bronze_working craftsmanship
+	@echo state_workforcen	@echo state_workforce > state_workforce
+
+recorded_history: writing political_philosophy drama_poetry
+	@echo recorded_historyn	@echo recorded_history > recorded_history
+
+construction: masonry the_wheel horseback_riding
+	@echo constructionn	@echo construction > construction
+
+engineering: masonry the_wheel
+	@echo engineeringn	@echo engineering > engineering
+
+iron_working: bronze_working
+	@echo iron_workingn	@echo iron_working > iron_working
+
+mathematics: bronze_working celestial_navigation currency drama_poetry
+	@echo mathematicsn	@echo mathematics > mathematics
+
+military_training: bronze_working military_tradition games_recreation
+	@echo military_trainingn	@echo military_training > military_training
+
+cartography: celestial_navigation shipbuilding
+	@echo cartographyn	@echo cartography > cartography
+
+medieval_faires: currency feudalism
+	@echo medieval_fairesn	@echo medieval_faires > medieval_faires
+
+guilds: currency feudalism civil_service
+	@echo guildsn	@echo guilds > guilds
+
+mercantilism: currency humanism
+	@echo mercantilismn	@echo mercantilism > mercantilism
+
+stirrups: horseback_riding feudalism
+	@echo stirrupsn	@echo stirrups > stirrups
+
+mass_production: shipbuilding machinery education
+	@echo mass_productionn	@echo mass_production > mass_production
+
+naval_tradition: shipbuilding defensive_tactics
+	@echo naval_traditionn	@echo naval_tradition > naval_tradition
+
+military_tactics: mathematics
+	@echo military_tacticsn	@echo military_tactics > military_tactics
+
+education: mathematics apprenticeship
+	@echo educationn	@echo education > education
+
+military_engineering: construction engineering
+	@echo military_engineeringn	@echo military_engineering > military_engineering
+
+castles: construction divine_right exploration
+	@echo castlesn	@echo castles > castles
+
+games_recreation: construction state_workforce
+	@echo games_recreationn	@echo games_recreation > games_recreation
+
+gunpowder: apprenticeship stirrups military_engineering
+	@echo gunpowdern	@echo gunpowder > gunpowder
+
+printing: machinery education
+	@echo printingn	@echo printing > printing
+
+metal_casting: machinery gunpowder
+	@echo metal_castingn	@echo metal_casting > metal_casting
+
+banking: education stirrups guilds
+	@echo bankingn	@echo banking > banking
+
+astronomy: education
+	@echo astronomyn	@echo astronomy > astronomy
+
+military_science: stirrups printing siege_tactics
+	@echo military_sciencen	@echo military_science > military_science
+
+siege_tactics: castles metal_casting
+	@echo siege_tacticsn	@echo siege_tactics > siege_tactics
+
+square_rigging: cartography gunpowder
+	@echo square_riggingn	@echo square_rigging > square_rigging
+
+exploration: cartography mercenaries medieval_faires
+	@echo explorationn	@echo exploration > exploration
+
+industrialization: mass_production square_rigging
+	@echo industrializationn	@echo industrialization > industrialization
+
+scientific_theory: banking astronomy the_enlightenment
+	@echo scientific_theoryn	@echo scientific_theory > scientific_theory
+
+colonialism: astronomy mercantilism
+	@echo colonialismn	@echo colonialism > colonialism
+
+ballistics: metal_casting siege_tactics
+	@echo ballisticsn	@echo ballistics > ballistics
+
+economics: metal_casting scientific_theory
+	@echo economicsn	@echo economics > economics
+
+scorched_earth: metal_casting nationalism
+	@echo scorched_earthn	@echo scorched_earth > scorched_earth
+
+steam_power: industrialization
+	@echo steam_powern	@echo steam_power > steam_power
+
+flight: industrialization scientific_theory economics
+	@echo flightn	@echo flight > flight
+
+steel: industrialization rifling
+	@echo steeln	@echo steel > steel
+
+class_struggle: industrialization ideology
+	@echo class_strugglen	@echo class_struggle > class_struggle
+
+sanitation: scientific_theory urbanization
+	@echo sanitationn	@echo sanitation > sanitation
+
+rifling: ballistics military_science
+	@echo riflingn	@echo rifling > rifling
+
+totalitarianism: military_science ideology
+	@echo totalitarianismn	@echo totalitarianism > totalitarianism
+
+electricity: steam_power mercantilism
+	@echo electricityn	@echo electricity > electricity
+
+radio: steam_power flight conservation
+	@echo radion	@echo radio > radio
+
+chemistry: sanitation
+	@echo chemistryn	@echo chemistry > chemistry
+
+suffrage: sanitation ideology
+	@echo suffragen	@echo suffrage > suffrage
+
+replaceable_parts: economics
+	@echo replaceable_partsn	@echo replaceable_parts > replaceable_parts
+
+capitalism: economics mass_media
+	@echo capitalismn	@echo capitalism > capitalism
+
+combined_arms: flight combustion
+	@echo combined_armsn	@echo combined_arms > combined_arms
+
+synthetic_materials: flight plastics
+	@echo synthetic_materialsn	@echo synthetic_materials > synthetic_materials
+
+rapid_deployment: flight cold_war
+	@echo rapid_deploymentn	@echo rapid_deployment > rapid_deployment
+
+advanced_ballistics: replaceable_parts steel electricity
+	@echo advanced_ballisticsn	@echo advanced_ballistics > advanced_ballistics
+
+combustion: steel natural_history
+	@echo combustionn	@echo combustion > combustion
+
+computers: electricity radio suffrage totalitarianism class_struggle
+	@echo computersn	@echo computers > computers
+
+advanced_flight: radio
+	@echo advanced_flightn	@echo advanced_flight > advanced_flight
+
+rocketry: radio chemistry
+	@echo rocketryn	@echo rocketry > rocketry
+
+nanotechnology: radio composites
+	@echo nanotechnologyn	@echo nanotechnology > nanotechnology
+
+mass_media: radio urbanization
+	@echo mass_median	@echo mass_media > mass_media
+
+nuclear_program: chemistry ideology
+	@echo nuclear_programn	@echo nuclear_program > nuclear_program
+
+plastics: combustion
+	@echo plasticsn	@echo plastics > plastics
+
+satellites: advanced_flight rocketry
+	@echo satellitesn	@echo satellites > satellites
+
+globalization: advanced_flight rapid_deployment space_race
+	@echo globalizationn	@echo globalization > globalization
+
+guidance_systems: rocketry advanced_ballistics
+	@echo guidance_systemsn	@echo guidance_systems > guidance_systems
+
+space_race: rocketry cold_war
+	@echo space_racen	@echo space_race > space_race
+
+nuclear_fission: advanced_ballistics combined_arms
+	@echo nuclear_fissionn	@echo nuclear_fission > nuclear_fission
+
+telecommunications: computers
+	@echo telecommunicationsn	@echo telecommunications > telecommunications
+
+robotics: computers globalization
+	@echo roboticsn	@echo robotics > robotics
+
+lasers: nuclear_fission
+	@echo lasersn	@echo lasers > lasers
+
+cold_war: nuclear_fission ideology
+	@echo cold_warn	@echo cold_war > cold_war
+
+composites: synthetic_materials
+	@echo compositesn	@echo composites > composites
+
+stealth_technology: synthetic_materials
+	@echo stealth_technologyn	@echo stealth_technology > stealth_technology
+
+social_media: telecommunications professional_sports space_race
+	@echo social_median	@echo social_media > social_media
+
+nuclear_fusion: lasers
+	@echo nuclear_fusionn	@echo nuclear_fusion > nuclear_fusion
+
+code_of_laws: 
+	@echo code_of_lawsn	@echo code_of_laws > code_of_laws
+
+craftsmanship: code_of_laws
+	@echo craftsmanshipn	@echo craftsmanship > craftsmanship
+
+foreign_trade: code_of_laws
+	@echo foreign_traden	@echo foreign_trade > foreign_trade
+
+military_tradition: craftsmanship
+	@echo military_traditionn	@echo military_tradition > military_tradition
+
+early_empire: foreign_trade
+	@echo early_empiren	@echo early_empire > early_empire
+
+mysticism: foreign_trade
+	@echo mysticismn	@echo mysticism > mysticism
+
+political_philosophy: state_workforce early_empire
+	@echo political_philosophyn	@echo political_philosophy > political_philosophy
+
+defensive_tactics: games_recreation political_philosophy
+	@echo defensive_tacticsn	@echo defensive_tactics > defensive_tactics
+
+humanism: drama_poetry medieval_faires
+	@echo humanismn	@echo humanism > humanism
+
+mercenaries: military_training feudalism
+	@echo mercenariesn	@echo mercenaries > mercenaries
+
+feudalism: defensive_tactics
+	@echo feudalismn	@echo feudalism > feudalism
+
+civil_service: defensive_tactics recorded_history
+	@echo civil_servicen	@echo civil_service > civil_service
+
+divine_right: theology civil_service
+	@echo divine_rightn	@echo divine_right > divine_right
+
+diplomatic_service: guilds
+	@echo diplomatic_servicen	@echo diplomatic_service > diplomatic_service
+
+reformed_church: guilds divine_right
+	@echo reformed_churchn	@echo reformed_church > reformed_church
+
+the_enlightenment: humanism diplomatic_service
+	@echo the_enlightenmentn	@echo the_enlightenment > the_enlightenment
+
+civil_engineering: mercantilism
+	@echo civil_engineeringn	@echo civil_engineering > civil_engineering
+
+nationalism: the_enlightenment
+	@echo nationalismn	@echo nationalism > nationalism
+
+opera_ballet: the_enlightenment
+	@echo opera_balletn	@echo opera_ballet > opera_ballet
+
+natural_history: colonialism
+	@echo natural_historyn	@echo natural_history > natural_history
+
+urbanization: civil_engineering nationalism
+	@echo urbanizationn	@echo urbanization > urbanization
+
+conservation: natural_history urbanization
+	@echo conservationn	@echo conservation > conservation
+
+mobilization: urbanization
+	@echo mobilizationn	@echo mobilization > mobilization
+
+cultural_heritage: conservation
+	@echo cultural_heritagen	@echo cultural_heritage > cultural_heritage
+
+ideology: mass_media mobilization
+	@echo ideologyn	@echo ideology > ideology
+
+professional_sports: ideology
+	@echo professional_sportsn	@echo professional_sports > professional_sports
+
+clean:
+	@del pottery
+	@del irrigation
+	@del writing
+	@del animal_husbandry
+	@del archery
+	@del mining
+	@del masonry
+	@del bronze_working
+	@del the_wheel
+	@del apprenticeship
+	@del sailing
+	@del celestial_navigation
+	@del shipbuilding
+	@del astrology
+	@del drama_poetry
+	@del theology
+	@del horseback_riding
+	@del machinery
+	@del currency
+	@del state_workforce
+	@del recorded_history
+	@del construction
+	@del engineering
+	@del iron_working
+	@del mathematics
+	@del military_training
+	@del cartography
+	@del medieval_faires
+	@del guilds
+	@del mercantilism
+	@del stirrups
+	@del mass_production
+	@del naval_tradition
+	@del military_tactics
+	@del education
+	@del military_engineering
+	@del castles
+	@del games_recreation
+	@del gunpowder
+	@del printing
+	@del metal_casting
+	@del banking
+	@del astronomy
+	@del military_science
+	@del siege_tactics
+	@del square_rigging
+	@del exploration
+	@del industrialization
+	@del scientific_theory
+	@del colonialism
+	@del ballistics
+	@del economics
+	@del scorched_earth
+	@del steam_power
+	@del flight
+	@del steel
+	@del class_struggle
+	@del sanitation
+	@del rifling
+	@del totalitarianism
+	@del electricity
+	@del radio
+	@del chemistry
+	@del suffrage
+	@del replaceable_parts
+	@del capitalism
+	@del combined_arms
+	@del synthetic_materials
+	@del rapid_deployment
+	@del advanced_ballistics
+	@del combustion
+	@del computers
+	@del advanced_flight
+	@del rocketry
+	@del nanotechnology
+	@del mass_media
+	@del nuclear_program
+	@del plastics
+	@del satellites
+	@del globalization
+	@del guidance_systems
+	@del space_race
+	@del nuclear_fission
+	@del telecommunications
+	@del robotics
+	@del lasers
+	@del cold_war
+	@del composites
+	@del stealth_technology
+	@del social_media
+	@del nuclear_fusion
+	@del code_of_laws
+	@del craftsmanship
+	@del foreign_trade
+	@del military_tradition
+	@del early_empire
+	@del mysticism
+	@del political_philosophy
+	@del defensive_tactics
+	@del humanism
+	@del mercenaries
+	@del feudalism
+	@del civil_service
+	@del divine_right
+	@del diplomatic_service
+	@del reformed_church
+	@del the_enlightenment
+	@del civil_engineering
+	@del nationalism
+	@del opera_ballet
+	@del natural_history
+	@del urbanization
+	@del conservation
+	@del mobilization
+	@del cultural_heritage
+	@del ideology
+	@del professional_sports
