@@ -24,25 +24,45 @@ def do_ls(filelist, curdir):
                 print(subpath, end='\t')
     print()
     
-def do_cat(f_name, z_name):
-    file = zipfile.ZipFile(z_name).open(f_name, 'r')
-    flag = False
-    for line in file.readlines():
-        cur_line = str(line.strip())[2:-1]
-        
-        print(cur_line)
+def do_cat(filelist, curdir, f_name, z_name):
+    index = f_name.rfind('/')
+    dir1 = curdir
+    if index != -1:
+        dir1 = do_cd(filelist, dir1, f_name[0:index+1])
+        f_name = f_name[index+1::]
+    if check(filelist, dir1+ f_name):
+        file = zipfile.ZipFile(z_name).open(dir1+f_name, 'r')
+        for line in file.readlines():
+            cur_line = str(line.strip())[2:-1]
+            print(cur_line)
         
 def do_cd(filelist, curdir, arg):
-    if curdir + arg + '/' in filelist:
-        curdir += arg + '/'
-    elif arg + '/' in filelist:
-        curdir = arg + '/'
-    elif arg[6::] + '/' in filelist:
-        curdir = arg[6::] + '/'        
-    elif arg == '/root' or arg == '~':
-        curdir = ''
+    basedir = curdir;
+    if (len(arg) > 0):
+        if arg[-1] == '/':
+            arg = arg[0:-1]
     else:
-        print('vs: cd: ' + arg +': no such direictory')
+        return curdir
+    comands = arg.split('/')
+    for com in comands:
+        if len(com) == 0:
+            curdir = curdir
+        elif com == '..':
+            index = curdir[0:-1].rfind('/')
+            if index == -1:
+                curdir = ''
+            else:
+                curdir = curdir[0:index]
+        elif com == '/root' or com == '~':
+            curdir = ''
+        elif curdir + com + '/' in filelist:
+            curdir += com + '/'
+        elif com + '/' in filelist:
+            curdir = com + '/'
+        else:
+            print('vs: cd: ' + arg +': no such direictory')
+            return basedir
+    #print(curdir)
     return curdir
 
 
@@ -75,8 +95,7 @@ while comand != 'exit':
             print('ls should have 0 arguments')
     elif comar[0] == 'cat':
         if len(comar) == 2:
-            if check(filelist, curdir + comar[1]):
-                do_cat(curdir + comar[1], args[1])
+            do_cat(filelist, curdir, comar[1], args[1])
         else:
             print('cat should have 1 argument')
     elif comar[0] == 'cd':
