@@ -1,0 +1,25 @@
+#!/bin/bash
+#Write a program that takes the name of a directory as a parameter and displays the names of files with the extension .txt, in the name of which there are only lowercase Latin letters.
+
+if [ "$#" -ne 1 ]
+then
+	echo "Usage: [$0] directory"
+	exit 1
+fi
+
+if [ ! -d "$1" ]
+then
+	echo "[$1] is not a directory"
+	exit 2
+fi
+lsvar=$(ls "$1")
+for file in $lsvar
+do
+	if [ -f "$1"/"$file" ]
+	then
+		if [[ $file =~ ^[a-z]+\.txt$ ]]
+		then
+			echo "$file"
+		fi
+	fi
+done

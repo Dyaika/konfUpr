@@ -1,0 +1,20 @@
+#!/bin/bash
+#Write a program that takes a file name as a parameter and outputs lines that contain email (mail can only contain alphabetic characters, login and domain part consist of at least 3 characters)
+
+if [ "$#" -ne 1 ]
+then
+	echo "Usage: [$0] filename"
+	exit 1
+fi
+
+if [ ! -f "$1" ]
+then
+	echo "[$1] is not a file"
+	exit 2
+fi
+
+pos_mails=$(grep -E -o "[a-zA-Z]+[a-zA-Z]+[a-zA-Z]+@[a-zA-Z]+[a-zA-Z]+[a-zA-Z]+\.[a-zA-Z]+" "$1")
+for mail in $pos_mails
+do
+	echo "$mail"
+done
