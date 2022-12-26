@@ -1,0 +1,37 @@
+#!/bin/bash
+#Write a program that displays the most frequently occurring word (a sequence of non-whitespace characters) among the .txt files in the directory given by the command line argument.
+
+
+if [ "$#" -ne 1 ]
+then
+	echo "Usage: $0 <directory>"
+	exit 1
+fi
+
+if [ ! -d "$1" ]
+then
+	echo "$1 is not a directory"
+	exit 2
+fi
+var_files=""
+for file in "$1"/*.txt
+do
+	if [ ! -f "$file" ]
+	then
+		continue
+	fi
+	var_files+="$(cat "$file")"
+done
+wordA="no_Word"
+countA=0
+for word in $var_files
+do
+	curC="$(echo "$var_files" | grep -o "$word" | wc -l)"
+	if [ "$curC" -gt "$countA" ]
+	then
+		countA=$curC
+		wordA=$word
+	fi
+done
+echo "$wordA"
+echo "$countA"

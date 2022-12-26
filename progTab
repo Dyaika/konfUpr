@@ -1,0 +1,22 @@
+#!/bin/bash
+#Write a program that replaces a sequence of 4 spaces in a file with a tab character. The input and output files are given as arguments.
+
+if [ "$#" -ne 2 ]
+then
+	echo "Usage: $0 <input file> <output file>"
+	exit 1
+fi
+
+if [ ! -f "$1" ]
+then
+	echo "File $1 does not exist"
+	exit 2
+fi
+
+if [ -f "$2" ]
+then
+	echo "File $2 already exists"
+	exit 3
+fi
+
+sed 's/    /\t/g' "$1" > "$2"

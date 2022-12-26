@@ -1,0 +1,35 @@
+#!/bin/bash
+#Write a program that takes a file as a parameter and determines if the current user has permissions to read, write, and execute the file. Line-by-line output in format: resolution yes/no.
+
+if [ "$#" -ne 1 ]
+then
+	echo "Usage: $0 file"
+	exit 1
+fi
+
+if [ ! -e "$1" ]
+then
+	echo "File $1 does not exist"
+	exit 2
+fi
+
+if [ -r "$1" ]
+then
+	echo "Чтение да"
+else
+	echo "Чтение нет"
+fi
+
+if [ -w "$1" ]
+then
+	echo "Запись да"
+else
+	echo "Запись нет"
+fi
+
+if [ -x "$1" ]
+then
+	echo "Исполнение да"
+else
+	echo "Исполнение нет"
+fi
